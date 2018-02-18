@@ -1,2 +1,2 @@
 # C-pthread-syntax
-syntax definition for pthread library for C language
+Vim syntax definition for pthread library for C language
