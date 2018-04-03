@@ -1,8 +1,6 @@
 " Vim syntax file
 " Language:	C
 
-
-
 "------------- Constant value ----------
 syntax keyword cPthreadConstant PTHREAD_CANCEL_ASYNCHRONOUS
 syntax keyword cPthreadConstant PTHREAD_CANCEL_ENABLE
@@ -29,14 +27,91 @@ syntax keyword cPthreadConstant PTHREAD_RWLOCK_INITIALIZER
 syntax keyword cPthreadConstant PTHREAD_SCOPE_PROCESS
 syntax keyword cPthreadConstant PTHREAD_SCOPE_SYSTEM
 
+"------------- Functions ----------
+syntax keyword cPthreadFunction pthread_attr_destroy
+syntax keyword cPthreadFunction pthread_attr_getdetachstate
+syntax keyword cPthreadFunction pthread_attr_getguardsize
+syntax keyword cPthreadFunction pthread_attr_getinheritsched
+syntax keyword cPthreadFunction pthread_attr_getschedparam
+syntax keyword cPthreadFunction pthread_attr_getschedpolicy
+syntax keyword cPthreadFunction pthread_attr_getscope
+syntax keyword cPthreadFunction pthread_attr_getstackaddr
+syntax keyword cPthreadFunction pthread_attr_getstacksize
+syntax keyword cPthreadFunction pthread_attr_init
+syntax keyword cPthreadFunction pthread_attr_setdetachstate
+syntax keyword cPthreadFunction pthread_attr_setguardsize
+syntax keyword cPthreadFunction pthread_attr_setinheritsched
+syntax keyword cPthreadFunction pthread_attr_setschedparam
+syntax keyword cPthreadFunction pthread_attr_setschedpolicy
+syntax keyword cPthreadFunction pthread_attr_setscope
+syntax keyword cPthreadFunction pthread_attr_setstackaddr
+syntax keyword cPthreadFunction pthread_attr_setstacksize
+syntax keyword cPthreadFunction pthread_cancel
+syntax keyword cPthreadFunction pthread_cleanup_push
+syntax keyword cPthreadFunction pthread_cleanup_pop
+syntax keyword cPthreadFunction pthread_cond_broadcast
+syntax keyword cPthreadFunction pthread_cond_destroy
+syntax keyword cPthreadFunction pthread_cond_init
+syntax keyword cPthreadFunction pthread_cond_signal
+syntax keyword cPthreadFunction pthread_cond_timedwait
+syntax keyword cPthreadFunction pthread_cond_wait
+syntax keyword cPthreadFunction pthread_condattr_destroy
+syntax keyword cPthreadFunction pthread_condattr_getpshared
+syntax keyword cPthreadFunction pthread_condattr_init
+syntax keyword cPthreadFunction pthread_condattr_setpshared
+syntax keyword cPthreadFunction pthread_create
+syntax keyword cPthreadFunction pthread_detach
+syntax keyword cPthreadFunction pthread_equal
+syntax keyword cPthreadFunction pthread_exit
+syntax keyword cPthreadFunction pthread_getconcurrency
+syntax keyword cPthreadFunction pthread_getschedparam
+syntax keyword cPthreadFunction pthread_getspecific
+syntax keyword cPthreadFunction pthread_join
+syntax keyword cPthreadFunction pthread_key_create
+syntax keyword cPthreadFunction pthread_key_delete
+syntax keyword cPthreadFunction pthread_mutex_destroy
+syntax keyword cPthreadFunction pthread_mutex_getprioceiling
+syntax keyword cPthreadFunction pthread_mutex_init
+syntax keyword cPthreadFunction pthread_mutex_lock
+syntax keyword cPthreadFunction pthread_mutex_setprioceiling
+syntax keyword cPthreadFunction pthread_mutex_trylock
+syntax keyword cPthreadFunction pthread_mutex_unlock
+syntax keyword cPthreadFunction pthread_mutexattr_destroy
+syntax keyword cPthreadFunction pthread_mutexattr_getprioceiling
+syntax keyword cPthreadFunction pthread_mutexattr_getprotocol
+syntax keyword cPthreadFunction pthread_mutexattr_getpshared
+syntax keyword cPthreadFunction pthread_mutexattr_gettype
+syntax keyword cPthreadFunction pthread_mutexattr_init
+syntax keyword cPthreadFunction pthread_mutexattr_setprioceiling
+syntax keyword cPthreadFunction pthread_mutexattr_setprotocol
+syntax keyword cPthreadFunction pthread_mutexattr_setpshared
+syntax keyword cPthreadFunction pthread_mutexattr_settype
+syntax keyword cPthreadFunction pthread_once
+syntax keyword cPthreadFunction pthread_rwlock_destroy
+syntax keyword cPthreadFunction pthread_rwlock_init
+syntax keyword cPthreadFunction pthread_rwlock_rdlock
+syntax keyword cPthreadFunction pthread_rwlock_tryrdlock
+syntax keyword cPthreadFunction pthread_rwlock_trywrlock
+syntax keyword cPthreadFunction pthread_rwlock_unlock
+syntax keyword cPthreadFunction pthread_rwlock_wrlock
+syntax keyword cPthreadFunction pthread_rwlockattr_destroy
+syntax keyword cPthreadFunction pthread_rwlockattr_getpshared
+syntax keyword cPthreadFunction pthread_rwlockattr_init
+syntax keyword cPthreadFunction pthread_rwlockattr_setpshared
+syntax keyword cPthreadFunction pthread_self
+syntax keyword cPthreadFunction pthread_setcancelstate
+syntax keyword cPthreadFunction pthread_setcanceltype
+syntax keyword cPthreadFunction pthread_setconcurrency
+syntax keyword cPthreadFunction pthread_setschedparam
+syntax keyword cPthreadFunction pthread_setspecific
+syntax keyword cPthreadFunction pthread_testcancel
+
 syntax keyword cPthreadType pthread_t
 syntax keyword cPthreadType pthread_mutex_t
 
-syntax keyword cPthreadFunction pthread_create
-syntax keyword cPthreadFunction pthread_join
 
 highlight default link cPthreadConstant Constant
+highlight default link cPthreadFunction Function
 
 highlight default link cPthreadType Typedef
-highlight default link cPthreadFunction Function
 
