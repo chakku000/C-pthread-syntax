@@ -106,12 +106,22 @@ syntax keyword cPthreadFunction pthread_setschedparam
 syntax keyword cPthreadFunction pthread_setspecific
 syntax keyword cPthreadFunction pthread_testcancel
 
-syntax keyword cPthreadType pthread_t
+
+"------------- Type ----------
+" These types are used in pthread, but defined in sys/types.h
+syntax keyword cPthreadType pthread_attr_t
+syntax keyword cPthreadType pthread_cond_t
+syntax keyword cPthreadType pthread_condattr_t
+syntax keyword cPthreadType pthread_key_t
 syntax keyword cPthreadType pthread_mutex_t
+syntax keyword cPthreadType pthread_mutexattr_t
+syntax keyword cPthreadType pthread_once_t
+syntax keyword cPthreadType pthread_rwlock_t
+syntax keyword cPthreadType pthread_rwlockattr_t
+syntax keyword cPthreadType pthread_t
 
 
 highlight default link cPthreadConstant Constant
 highlight default link cPthreadFunction Function
-
 highlight default link cPthreadType Typedef
 
